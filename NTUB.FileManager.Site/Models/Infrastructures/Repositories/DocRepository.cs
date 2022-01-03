@@ -75,7 +75,7 @@ namespace NTUB.FileManager.Site.Models.Infrastructures.Repositories
 
 		public void Update(DocEntity entity)
 		{
-			Doc model = db.Docs.Find(entity.Id);
+			Doc model = db.Docs.Find(entity.Id); //Find找一筆資料，只能用有Primary Key(主索引鍵)的
 			if (model == null)
 			{
 				return;
